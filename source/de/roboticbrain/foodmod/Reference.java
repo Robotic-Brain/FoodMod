@@ -9,4 +9,9 @@ public class Reference {
     public static final String CLIENT_PROXY_CLASS = "de.roboticbrain.foodmod.network.proxy.ClientProxy";
     public static final String SERVER_PROXY_CLASS = "de.roboticbrain.foodmod.network.proxy.CommonProxy";
     
+    public static final String CONFIGURATION_DIR = CHANNEL_NAME;
+    
+    // File holding server specific configuration (e.g. BlockIDs and other internal stuff)
+    public static final String SERVER_CONFIG_FILE = "server.cfg";
+    
 }

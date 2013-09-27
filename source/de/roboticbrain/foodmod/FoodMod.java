@@ -10,6 +10,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import de.roboticbrain.foodmod.configuration.ConfigurationHandler;
 import de.roboticbrain.foodmod.network.PacketHandler;
 import de.roboticbrain.foodmod.network.proxy.CommonProxy;
 import de.roboticbrain.foodmod.util.LogHelper;
@@ -38,10 +39,10 @@ public class FoodMod {
         // Initialize the log helper
         LogHelper.init();
 
-        /*// Initialize the configuration
-        ConfigurationHandler.init(new File(event.getModConfigurationDirectory().getAbsolutePath() + File.separator + Reference.CHANNEL_NAME + File.separator + Reference.MOD_ID + ".cfg"));
+        // Initialize the configuration
+        ConfigurationHandler.init(event.getModConfigurationDirectory());
 
-        // Initialize mod blocks
+        /*// Initialize mod blocks
         ModBlocks.init();
 
         // Initialize mod items
